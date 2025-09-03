@@ -27,17 +27,17 @@ function generateDomains() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const domainEl = document.getElementById("domain");
-  const btn = document.getElementById("newDomain");
+  const domainParagraph = document.getElementById("domain");
+  const generateDomainBtn = document.getElementById("newDomain");
 
   const domains = generateDomains();
 
   domainEl.textContent = domains[Math.floor(Math.random() * domains.length)];
 
 
-  btn.addEventListener("click", () => {
+  generateDomainBtn.addEventListener("click", () => {
     const randomDomain = domains[Math.floor(Math.random() * domains.length)];
-    domainEl.textContent = randomDomain;
+    domainParagraph.textContent = randomDomain;
     console.log(randomDomain);
   });
 });
